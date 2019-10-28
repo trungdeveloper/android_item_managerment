@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onUpdateClick(int position) {
                 Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
-                intent.putExtra("id", position);
+                intent.putExtra("id", mAdapter.items.get(position).getId());
                 startActivity(intent);
             }
 

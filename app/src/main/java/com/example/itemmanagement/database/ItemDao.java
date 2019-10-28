@@ -15,8 +15,8 @@ public interface ItemDao {
     @Query("SELECT * FROM item")
     List<Item> getAll();
 
-    @Query("SELECT * FROM item WHERE id = :id")
-    Item getItem(int id);
+    @Query("SELECT * from item where id = :id LIMIT 1")
+    List<Item> getItem(int id);
 
     @Insert
     void insert(Item item);
